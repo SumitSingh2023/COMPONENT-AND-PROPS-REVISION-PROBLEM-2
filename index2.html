@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Boilerplate Code 2</title>
+</head>
+<body>
+    <div id="root"></div>
+	    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+	    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+	    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        // Your React code will go here
+
+        function Container({children, borderColor}){
+            return(
+               <div style={{padding:"25px", margin:"25px", border:`2px solid ${borderColor}`}}>
+                   {children}
+                
+                </div>
+
+            )
+        }
+
+        function App(){
+            return(
+                <>
+                    <Container borderColor="red">
+                        <p>Hello, My name is sumit singh</p>
+                    </Container>
+
+                    <Container borderColor="yellow">
+                        <p>Hello, How are you</p>
+                    </Container>
+
+                    <Container borderColor="black">
+                        <p>Hello, where are you from</p>
+                    </Container>
+
+                    <Container borderColor="green">
+                        <p>Hello, I am learning react</p>
+                    </Container>
+
+                    <Container borderColor="blue">
+                        <p>Hello, I am ready to give interview</p>
+                    </Container>
+
+                    <Container borderColor="orange">
+                        <p>Hello, will you be my freind</p>
+                    </Container>
+                </>
+            )
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<App/>)
+    </script>
+</body>
+</html>
